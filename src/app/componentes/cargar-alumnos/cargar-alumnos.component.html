@@ -1,10 +1,40 @@
-<form action="">
-    
+<!--form action="">
+
     <input type="text" [(ngModel)]="nombre" name="nombre" placeholder="nombre">
+    <br>
+    <input type="text" [(ngModel)]="apellido" name="apellido" placeholder="apellido">
     <br>
     <input type="number" [(ngModel)]="legajo" name="legajo" placeholder="legajo">
     <br>
     <input type="text" [(ngModel)]="materia" name="materia" placeholder="materia">
     <br>
-    <input type="button" value="enviar" (click)="Cargar($event)"> 
-</form>
+    <input type="button" color="primary" class="mat-focus-indicator mat-raised-button mat-button-base mat-primary" style="width: 100px;height: 50px;" value="Enviar" (click)="Cargar($event)"> 
+
+</form-->
+<br>
+<mat-card-content>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" [(ngModel)]="nombre" name="nombre" placeholder="nombre">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellido</mat-label>
+            <input matInput type="text" [(ngModel)]="apellido" name="apellido" placeholder="apellido">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Legajo</mat-label>
+            <input matInput type="number" [(ngModel)]="legajo" name="legajo" placeholder="legajo">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Materia</mat-label>
+            <input matInput type="text" [(ngModel)]="materia" name="materia" placeholder="materia">
+          </mat-form-field>
+          <br>
+          <input type="button" color="primary" class="mat-raised-button" value="Enviar" (click)="Cargar($event)">
+      </form>
+</mat-card-content>
+

@@ -1,4 +1,9 @@
-<input type="button" value="Cargar Alumnos" (click)="visualizacionCargar()">
-<input type="button" value="Cargar Listar" (click)="visualizacionListar()">
-<app-cargar-alumnos></app-cargar-alumnos>
-<app-listar-alumnos></app-listar-alumnos>
+<br>
+<div style="width: 400px;margin:auto;">
+    <div style="align-content: center;" align="center">
+        <button mat-raised-button (click)="visualizacionCargar()">Cargar Alumno</button>
+        <button mat-raised-button color="primary" (click)="visualizacionListar()">Ver Lista</button>
+    </div>
+    <app-cargar-alumnos (onCargar)="Cargar($event)" *ngIf="visualizarCargar" style="width: 400px;align-content: center;" align="center"></app-cargar-alumnos>
+    <app-listar-alumnos [listaAlumnos]="listaAlumnos" style="width: 400px;align-content: center;" *ngIf="visualizarLista" align="center"></app-listar-alumnos>
+</div>
